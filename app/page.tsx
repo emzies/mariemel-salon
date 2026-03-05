@@ -64,11 +64,13 @@ export default function Home() {
     return () => document.removeEventListener('click', onClick)
   }, [setMenuOpen])
 
+  const basePath = process.env.NODE_ENV === 'production' ? '/mariemel-salon' : ''
+
   const services = [
     {
       id: 'hair',
       label: 'HAIR',
-      image: '/hair.jpg',
+      image: `${basePath}/hair.jpg`,
       title: 'Hair Styling',
       tagline: 'Cut. Color. Transform.',
       desc: 'Modern cuts and styling tailored to your look.',
@@ -77,7 +79,7 @@ export default function Home() {
     {
       id: 'nails',
       label: 'NAILS',
-      image: '/nail.jpg',
+      image: `${basePath}/nail.jpg`,
       title: 'Nail Care',
       tagline: 'Polish. Perfect. Shine.',
       desc: 'Clean, elegant, and long-lasting nail treatments.',
@@ -86,7 +88,7 @@ export default function Home() {
     {
       id: 'spa',
       label: 'SPA',
-      image: '/spa.jpg',
+      image: `${basePath}/spa.jpg`,
       title: 'Spa Treatments',
       tagline: 'Relax. Restore. Glow.',
       desc: 'Relaxing and rejuvenating skincare services.',
