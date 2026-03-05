@@ -334,10 +334,10 @@ export default function Home() {
                 <div
                   key={svc.id}
                   onClick={() => setExpandedService(expandedService === svc.id ? null : svc.id)}
-                  className="card-hover rounded-3xl overflow-hidden relative cursor-pointer group"
+                  className="card-hover rounded-3xl relative cursor-pointer group"
                 >
-                  <div className="h-1.5 w-full bg-[#319905]" />
-                  <div className="bg-white border border-[#e8f5e2] rounded-b-3xl p-8 shadow-sm">
+                 <div className="h-1.5 w-full bg-[#319905] rounded-t-3xl" />
+                  <div className="bg-white border border-[#e8f5e2] border-t-0 rounded-b-3xl p-8 shadow-sm">
                     <div className="flex items-start justify-between mb-6">
                       <div>
                         <Image src={svc.image} alt={svc.title} width={180} height={180} className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full object-cover" />
